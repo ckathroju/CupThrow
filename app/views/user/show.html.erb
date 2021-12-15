@@ -1,0 +1,44 @@
+
+
+<div>
+  <div>
+    <h4>
+      Name: <%= current_user.name %>
+    </h4>
+
+    <h4>
+      Points: <%= current_user.points %>
+    </h4>
+
+    <h4>
+      Gems: <%= current_user.gem %>
+    </h4>
+  </div>
+  <div>
+    <h3>Bag Contents</h3>
+    <div>
+      <% current_user.bag.items_from_id.each do |item| %>
+        <ul>
+          <li>Type: <%= item.type %> </li>
+          <% if item.type == 'Die' %>
+            <li>Colour: <%= item.colour %></li>
+            <li>Sides: <%= item.sides %></li>
+          <% else %>
+            <li>Denomination: <%= item.denomination %></li>
+          <% end %>
+          <li>Calls: <%= item.calls %></li>
+          <li>Results: <%= item.result %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <%= link_to "Play a Game", play_game_user_path %>
+  <%= link_to "Purchase Items", purchase_items_user_path %>
+
+  <div>
+    <h3> Account Settings </h3>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <%= button_to "Delete my Account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %>
+  </div>
+</div>
