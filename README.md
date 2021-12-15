@@ -1,24 +1,11 @@
-# README
+# CupThrow
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Overview
 
-Things you may want to cover:
+Takes the Randomizer, Coin, Die, RandomizerContainer, Player, etc. classes written in Ruby and uses them to create a website that implements a single player game played against a server.
 
-* Ruby version
+### Details
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Hello World Page
+- Sign-in Page
+- User's Page
